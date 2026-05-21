@@ -62,10 +62,15 @@ body {
   position: absolute;
 
   left: 40px;
-
   top: 50%;
 
   transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+
+  width: auto;
+  height: auto;
 }
 
 .nav-logo img {
@@ -423,13 +428,9 @@ main {
   }
 
 
-   .nav-logo {
-  pointer-events: none;
-}
-
-.nav-logo a,
-.nav-logo img {
-  pointer-events: auto;
+.nav-logo a {
+  display: inline-block;
+  line-height: 0;
 }
 
 
