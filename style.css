@@ -66,18 +66,12 @@ body {
 
   transform: translateY(-50%);
 
-  display: flex;
-  align-items: center;
-
-  width: auto;
-  height: auto;
+  line-height: 0;
 }
 
 .nav-logo img {
   height: 350px;
-
   width: auto;
-
   display: block;
 }
 
@@ -112,7 +106,10 @@ body {
 .dropdown:hover .dropbtn {
   opacity: 0.7;
 }
-
+.nav-logo a {
+  display: inline-block;
+  line-height: 0;
+}
 /* ========================================
    DROPDOWN
 ======================================== */
@@ -381,6 +378,7 @@ main {
   border-radius: 12px;
 }
 
+
 /* ========================================
    RESPONSIVE
 ======================================== */
@@ -427,13 +425,4 @@ main {
     grid-template-columns: 1fr;
   }
 
-
-.nav-logo a {
-  display: inline-block;
-  line-height: 0;
-}
-
-
-
-   
 }
