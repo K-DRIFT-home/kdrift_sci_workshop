@@ -1,3 +1,7 @@
+/* ========================================
+   RESET
+======================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ========================================
+   BODY
+======================================== */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fafafa;
@@ -15,36 +23,46 @@ body {
   line-height: 1.6;
 }
 
-/* NAVIGATION */
+/* ========================================
+   NAVIGATION
+======================================== */
 
-/* 1. nav 고정 */
 .main-nav {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
 
-  z-index: 1000;
+  z-index: 9999;
 
-  background: linear-gradient(90deg, #2d2a7a, #1f1d57);
+  background: linear-gradient(
+    90deg,
+    #2d2a7a,
+    #1f1d57
+  );
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 10px 56px;
-
   min-height: 80px;
+
+  padding: 10px 56px;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
 }
 
+/* ========================================
+   LOGO
+======================================== */
 
-/* 로고를 nav 흐름에서 분리 */
 .nav-logo {
   position: absolute;
 
   left: 40px;
+
   top: 50%;
 
   transform: translateY(-50%);
@@ -52,25 +70,37 @@ body {
 
 .nav-logo img {
   height: 350px;
+
   width: auto;
 
   display: block;
 }
 
-/* 메뉴는 중앙 유지 */
+/* ========================================
+   NAV LINKS
+======================================== */
+
 .nav-links {
   display: flex;
+
   align-items: center;
+
   gap: 38px;
 }
 
 .nav-links > a,
 .dropbtn {
   color: white;
+
   font-weight: 700;
+
   text-decoration: none;
+
   cursor: pointer;
+
   font-size: 1rem;
+
+  transition: 0.2s;
 }
 
 .nav-links > a:hover,
@@ -78,10 +108,13 @@ body {
   opacity: 0.7;
 }
 
-/* DROPDOWN */
+/* ========================================
+   DROPDOWN
+======================================== */
 
 .dropdown {
   position: relative;
+
   display: inline-block;
 }
 
@@ -93,17 +126,23 @@ body {
   display: none;
 
   position: absolute;
+
   top: 100%;
+
   left: 50%;
+
   transform: translateX(-50%);
 
   min-width: 140px;
+
   background: white;
 
   border-radius: 10px;
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.14);
 
   overflow: hidden;
+
   z-index: 2000;
 }
 
@@ -113,9 +152,11 @@ body {
   padding: 12px 20px;
 
   text-align: center;
+
   text-decoration: none;
 
   color: #2d2a7a;
+
   font-weight: 700;
 
   white-space: nowrap;
@@ -129,37 +170,49 @@ body {
   display: block;
 }
 
-/* MAIN */
+/* ========================================
+   MAIN
+======================================== */
 
 main {
   max-width: 1200px;
 
   margin: 0 auto;
 
-  padding: 160px 24px 60px;
+  padding: 180px 24px 60px;
 }
 
-/* HERO */
+/* ========================================
+   HERO
+======================================== */
 
 .hero {
   text-align: center;
+
   margin-bottom: 70px;
 }
 
 .hero h2 {
   font-size: 3rem;
+
   color: #2d2a7a;
+
   margin-bottom: 20px;
 }
 
 .hero p {
   max-width: 760px;
+
   margin: 0 auto;
+
   font-size: 1.1rem;
+
   color: #555;
 }
 
-/* CONTENT CARD */
+/* ========================================
+   CONTENT CARD
+======================================== */
 
 .content-card {
   background: white;
@@ -175,7 +228,9 @@ main {
 
 .content-card h3 {
   color: #2d2a7a;
+
   margin-bottom: 18px;
+
   font-size: 1.5rem;
 }
 
@@ -183,12 +238,17 @@ main {
   padding-left: 22px;
 }
 
-/* COMMITTEE */
+/* ========================================
+   COMMITTEE
+======================================== */
 
 .committee-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 32px;
+
   margin-bottom: 40px;
 }
 
@@ -196,6 +256,7 @@ main {
   background: white;
 
   border: 1px solid #ddd;
+
   border-radius: 16px;
 
   padding: 32px;
@@ -205,7 +266,9 @@ main {
 
 .committee-card h3 {
   color: #2d2a7a;
+
   margin-bottom: 20px;
+
   font-size: 1.4rem;
 }
 
@@ -217,12 +280,17 @@ main {
   margin-bottom: 10px;
 }
 
-/* LINKS */
+/* ========================================
+   LINKS
+======================================== */
 
 .link-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 24px;
+
   margin-bottom: 40px;
 }
 
@@ -230,15 +298,19 @@ main {
   background: white;
 
   border: 2px solid #2d2a7a;
+
   border-radius: 16px;
 
   padding: 28px 32px;
 
   text-decoration: none;
+
   color: inherit;
 
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 
   transition: 0.2s;
@@ -246,12 +318,15 @@ main {
 
 .info-link:hover {
   transform: translateY(-3px);
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .info-link h3 {
   color: #2d2a7a;
+
   margin-bottom: 8px;
+
   font-size: 1.4rem;
 }
 
@@ -261,10 +336,13 @@ main {
 
 .info-link span {
   font-size: 3rem;
+
   color: #2d2a7a;
 }
 
-/* VENUE */
+/* ========================================
+   VENUE
+======================================== */
 
 .venue-section {
   background: white;
@@ -274,7 +352,9 @@ main {
   padding: 36px;
 
   display: grid;
+
   grid-template-columns: 1fr 1.5fr;
+
   gap: 32px;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -282,7 +362,9 @@ main {
 
 .venue-info h3 {
   color: #2d2a7a;
+
   margin-bottom: 20px;
+
   font-size: 1.5rem;
 }
 
@@ -294,27 +376,40 @@ main {
   border-radius: 12px;
 }
 
-/* RESPONSIVE */
+/* ========================================
+   RESPONSIVE
+======================================== */
 
 @media (max-width: 900px) {
+
   .main-nav {
     flex-direction: column;
+
     gap: 16px;
+
     padding: 16px 24px;
   }
 
+  .nav-logo {
+    position: static;
+
+    transform: none;
+  }
+
   .nav-logo img {
-    height: 56px;
+    height: 90px;
   }
 
   .nav-links {
     gap: 20px;
+
     flex-wrap: wrap;
+
     justify-content: center;
   }
 
   main {
-    padding-top: 50px;
+    padding-top: 220px;
   }
 
   .hero h2 {
