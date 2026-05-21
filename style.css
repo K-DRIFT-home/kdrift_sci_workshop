@@ -22,7 +22,7 @@ body {
   top: 0;
   z-index: 1000;
 
-  background: white;
+  background:  linear-gradient(90deg, #2d2a7a, #1f1d57);
 
   display: flex;
   justify-content: space-between;
@@ -47,7 +47,7 @@ body {
 
 .nav-links > a,
 .dropbtn {
-  color: #2d2a7a;
+  color: white;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
