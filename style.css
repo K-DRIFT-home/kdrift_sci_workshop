@@ -1,16 +1,12 @@
-/* ========================================
-   RESET
-======================================== */
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========================================
-   BODY
-======================================== */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -19,197 +15,130 @@ body {
   line-height: 1.6;
 }
 
-/* ========================================
-   HEADER
-======================================== */
-
-.top-header {
-  background: linear-gradient(90deg, #2d2a7a, #1f1d57);
-
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  position: relative;
-
-  padding: 24px 40px;
-}
-
-/* LOGO */
-
-.header-left {
-  position: absolute;
-  left: 40px;
-}
-
-.header-left img {
-  height: 300px;
-  width: auto;
-}
-
-/* HEADER TEXT */
-
-.header-center {
-  text-align: center;
-}
-
-.header-center h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.header-center p {
-  margin-top: 6px;
-  font-size: 1rem;
-  opacity: 0.92;
-}
-
-/* ========================================
-   NAVIGATION
-======================================== */
+/* NAVIGATION */
 
 .main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   background: white;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  gap: 42px;
+  padding: 14px 56px;
 
-  padding: 18px;
-
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-
-  position: relative;
-  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-/* MAIN NAV LINKS */
+.nav-logo img {
+  height: 70px;
+  width: auto;
+  display: block;
+}
 
-.main-nav > a,
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.nav-links > a,
 .dropbtn {
   color: #2d2a7a;
-
-  font-weight: 600;
-
+  font-weight: 700;
   text-decoration: none;
-
-  transition: 0.2s;
-
   cursor: pointer;
+  font-size: 1rem;
 }
 
-.main-nav > a:hover,
-.dropbtn:hover {
+.nav-links > a:hover,
+.dropdown:hover .dropbtn {
   opacity: 0.7;
 }
 
-/* ========================================
-   DROPDOWN
-======================================== */
+/* DROPDOWN */
 
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* DROPDOWN BOX */
+.dropbtn {
+  cursor: default;
+}
 
 .dropdown-content {
   display: none;
 
   position: absolute;
-
   top: 100%;
   left: 50%;
-
   transform: translateX(-50%);
 
-  min-width: 160px;
-
+  min-width: 140px;
   background: white;
 
   border-radius: 10px;
-
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.14);
 
   overflow: hidden;
-
-  z-index: 999;
+  z-index: 2000;
 }
-
-/* DROPDOWN LINKS */
 
 .dropdown-content a {
   display: block;
 
-  padding: 12px 18px;
+  padding: 12px 20px;
 
   text-align: center;
-
   text-decoration: none;
 
   color: #2d2a7a;
+  font-weight: 700;
 
-  transition: 0.2s;
+  white-space: nowrap;
 }
 
 .dropdown-content a:hover {
   background: #f4f4fa;
 }
 
-/* SHOW ON HOVER */
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* ========================================
-   MAIN
-======================================== */
+/* MAIN */
 
 main {
   max-width: 1200px;
-
   margin: 0 auto;
-
-  padding: 60px 24px;
+  padding: 80px 24px 60px;
 }
 
-/* ========================================
-   HERO
-======================================== */
+/* HERO */
 
 .hero {
   text-align: center;
-
-  margin-bottom: 60px;
+  margin-bottom: 70px;
 }
 
 .hero h2 {
   font-size: 3rem;
-
   color: #2d2a7a;
-
   margin-bottom: 20px;
 }
 
 .hero p {
   max-width: 760px;
-
   margin: 0 auto;
-
   font-size: 1.1rem;
-
   color: #555;
 }
 
-/* ========================================
-   CONTENT CARD
-======================================== */
+/* CONTENT CARD */
 
 .content-card {
   background: white;
@@ -225,35 +154,27 @@ main {
 
 .content-card h3 {
   color: #2d2a7a;
-
   margin-bottom: 18px;
-
   font-size: 1.5rem;
 }
 
-/* ========================================
-   COMMITTEE GRID
-======================================== */
+.content-card ul {
+  padding-left: 22px;
+}
+
+/* COMMITTEE */
 
 .committee-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 32px;
-
   margin-bottom: 40px;
 }
-
-/* ========================================
-   COMMITTEE CARD
-======================================== */
 
 .committee-card {
   background: white;
 
   border: 1px solid #ddd;
-
   border-radius: 16px;
 
   padding: 32px;
@@ -263,9 +184,7 @@ main {
 
 .committee-card h3 {
   color: #2d2a7a;
-
   margin-bottom: 20px;
-
   font-size: 1.4rem;
 }
 
@@ -277,35 +196,24 @@ main {
   margin-bottom: 10px;
 }
 
-/* ========================================
-   LINK GRID
-======================================== */
+/* LINKS */
 
 .link-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 24px;
-
   margin-bottom: 40px;
 }
-
-/* ========================================
-   LINK CARD
-======================================== */
 
 .info-link {
   background: white;
 
   border: 2px solid #2d2a7a;
-
   border-radius: 16px;
 
   padding: 28px 32px;
 
   text-decoration: none;
-
   color: inherit;
 
   display: flex;
@@ -317,27 +225,25 @@ main {
 
 .info-link:hover {
   transform: translateY(-3px);
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .info-link h3 {
   color: #2d2a7a;
-
   margin-bottom: 8px;
-
   font-size: 1.4rem;
+}
+
+.info-link p {
+  color: #444;
 }
 
 .info-link span {
   font-size: 3rem;
-
   color: #2d2a7a;
 }
 
-/* ========================================
-   VENUE
-======================================== */
+/* VENUE */
 
 .venue-section {
   background: white;
@@ -347,9 +253,7 @@ main {
   padding: 36px;
 
   display: grid;
-
   grid-template-columns: 1fr 1.5fr;
-
   gap: 32px;
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -357,9 +261,7 @@ main {
 
 .venue-info h3 {
   color: #2d2a7a;
-
   margin-bottom: 20px;
-
   font-size: 1.5rem;
 }
 
@@ -367,43 +269,40 @@ main {
   margin-bottom: 18px;
 }
 
-/* MAP */
-
 .venue-map iframe {
   border-radius: 12px;
 }
 
-/* ========================================
-   RESPONSIVE
-======================================== */
+/* RESPONSIVE */
 
 @media (max-width: 900px) {
-
-  .committee-grid,
-  .link-grid,
-  .venue-section {
-    grid-template-columns: 1fr;
+  .main-nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 24px;
   }
 
-  .main-nav {
+  .nav-logo img {
+    height: 56px;
+  }
+
+  .nav-links {
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding-top: 50px;
   }
 
   .hero h2 {
     font-size: 2.2rem;
   }
 
-  .header-left {
-    left: 20px;
+  .committee-grid,
+  .link-grid,
+  .venue-section {
+    grid-template-columns: 1fr;
   }
-
-  .header-left img {
-    height: 70px;
-  }
-
-  .top-header {
-    padding: 20px;
-  }
-
 }
