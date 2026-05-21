@@ -421,4 +421,18 @@ main {
   .venue-section {
     grid-template-columns: 1fr;
   }
+
+
+   .nav-logo {
+  pointer-events: none;
+}
+
+.nav-logo a,
+.nav-logo img {
+  pointer-events: auto;
+}
+
+
+
+   
 }
