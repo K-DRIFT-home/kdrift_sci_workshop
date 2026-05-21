@@ -43,3 +43,23 @@ main {
 section {
   margin-bottom: 56px;
 }
+.link-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.button-link:hover {
+  background: #333;
+}
