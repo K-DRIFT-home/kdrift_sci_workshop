@@ -7,16 +7,18 @@ body {
 header {
   background: #111;
   color: white;
-  padding: 40px;
+  padding: 30px;
   text-align: center;
 }
 
 nav {
   padding: 15px;
   background: #eee;
+  text-align: center;
 }
 
 nav a {
   margin-right: 20px;
   text-decoration: none;
+  text-align: center;
 }
