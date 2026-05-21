@@ -1,65 +1,309 @@
-body {
-  font-family: Arial;
-  margin: 50;
-  padding: 50;
-}
+/* RESET */
 
-/* Header 세로 폭 줄이기 */
-header {
-  padding: 18px 40px;   /* 기존 40px 이상이면 줄이기 */
-}
-
-/* Header 제목 여백도 줄이기 */
-header h1 {
+* {
   margin: 0;
-  font-size: 2rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header p {
-  margin: 6px 0 0;
+/* BODY */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fafafa;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* 네비게이터 가운데 정렬 */
-nav {
+/* HEADER */
+
+.top-header {
+  background: linear-gradient(90deg, #2d2a7a, #1f1d57);
+
+  color: white;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 28px;
-  padding: 12px 20px;
+  justify-content: center;
+
+  position: relative;
+
+  padding: 18px 40px;
 }
 
-nav a {
+/* LOGO */
+
+.header-left {
+  position: absolute;
+  left: 40px;
+}
+
+.header-left img {
+  height: 60px;
+  width: auto;
+}
+
+/* HEADER TEXT */
+
+.header-center {
   text-align: center;
 }
 
-/* 메인 페이지 여백 / 버퍼 */
-main {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 24px;
+.header-center h1 {
+  font-size: 2.2rem;
 }
 
-/* 각 섹션 간격 */
-section {
-  margin-bottom: 56px;
+.header-center p {
+  margin-top: 4px;
+  font-size: 1rem;
+  opacity: 0.9;
 }
-.link-buttons {
+
+/* NAVIGATION */
+
+nav {
+  background: white;
+
   display: flex;
-  gap: 16px;
-  margin-top: 12px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 42px;
+
+  padding: 18px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.button-link {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #111;
-  color: white;
+nav a {
   text-decoration: none;
-  border-radius: 8px;
+
+  color: #2d2a7a;
+
+  font-weight: 600;
+
   transition: 0.2s;
 }
 
-.button-link:hover {
-  background: #333;
+nav a:hover {
+  opacity: 0.7;
+}
+
+/* MAIN */
+
+main {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 60px 24px;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+
+  color: #2d2a7a;
+
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  font-size: 1.1rem;
+
+  color: #555;
+}
+
+/* GENERIC CONTENT CARD */
+
+.content-card {
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 36px;
+
+  margin-bottom: 32px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-card h3 {
+  color: #2d2a7a;
+
+  margin-bottom: 18px;
+
+  font-size: 1.5rem;
+}
+
+/* COMMITTEE GRID */
+
+.committee-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+
+  margin-bottom: 40px;
+}
+
+/* COMMITTEE CARD */
+
+.committee-card {
+  background: white;
+
+  border: 1px solid #ddd;
+
+  border-radius: 16px;
+
+  padding: 32px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.committee-card h3 {
+  color: #2d2a7a;
+
+  margin-bottom: 20px;
+
+  font-size: 1.4rem;
+}
+
+.committee-card ul {
+  padding-left: 20px;
+}
+
+.committee-card li {
+  margin-bottom: 10px;
+}
+
+/* LINK GRID */
+
+.link-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px;
+
+  margin-bottom: 40px;
+}
+
+/* LINK CARD */
+
+.info-link {
+  background: white;
+
+  border: 2px solid #2d2a7a;
+
+  border-radius: 16px;
+
+  padding: 28px 32px;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.2s;
+}
+
+.info-link:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.info-link h3 {
+  color: #2d2a7a;
+
+  margin-bottom: 8px;
+
+  font-size: 1.4rem;
+}
+
+.info-link span {
+  font-size: 3rem;
+
+  color: #2d2a7a;
+}
+
+/* VENUE */
+
+.venue-section {
+  background: white;
+
+  border-radius: 18px;
+
+  padding: 36px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.5fr;
+
+  gap: 32px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.venue-info h3 {
+  color: #2d2a7a;
+
+  margin-bottom: 20px;
+
+  font-size: 1.5rem;
+}
+
+.venue-info p {
+  margin-bottom: 18px;
+}
+
+/* MAP */
+
+.venue-map iframe {
+  border-radius: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .committee-grid,
+  .link-grid,
+  .venue-section {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .header-left {
+    left: 20px;
+  }
+
+  .header-left img {
+    height: 45px;
+  }
+
 }
